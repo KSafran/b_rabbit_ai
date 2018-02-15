@@ -9,7 +9,7 @@ def extract_elements(html, class_):
 
 def get_100_rap_songs(year):
     response = requests.get('https://www.billboard.com/charts/year-end/{}/hot-r-and-and-b-hip-hop-songs'.format(str(year)))
-    html = BeautifulSoup(response.text)
+    html = BeautifulSoup(response.text, "html5lib")
     songs = extract_elements(html, 'ye-chart-item__title')
     artists = extract_elements(html, 'ye-chart-item__artist')
     song_data = pd.DataFrame.from_records({'title':songs, 'artist':artists})
