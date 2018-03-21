@@ -1,5 +1,5 @@
-rapper/data/*
-rapper/__pycache__/
+brabbit_django/brabbit_django/rapper/data/*
+brabbit_django/brabbit_django/rapper/__pycache__/*
 brabbit_django/db.sqlite3
 brabbit_django/brabbit_django/__pycache__/
 spotify_playlists/client_secret.txt
