@@ -3,3 +3,4 @@ rapper/__pycache__/*
 spotify_playlists/client_secret.txt
 spotify_playlists/client_id.txt
 rapperenv
+__pycache__
