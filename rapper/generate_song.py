@@ -1,16 +1,15 @@
 import re
 import json
 import markovify
-from django.http import HttpResponse
 
-with open('brabbit_django/rapper/data/billboard_100_bigram_model.json', 'r') as model:
+with open('rapper/data/billboard_100_bigram_model.json', 'r') as model:
     song_model_json = model.read()
 
 song_model = markovify.Chain.from_json(song_model_json)
 
-def home(request):
+def sing():
     song = []
-    while len(song) < 80:
+    while len(song) < 30:
         song = song + song_model.walk()
 
     song = ' '.join(song)
@@ -22,5 +21,5 @@ def home(request):
 
     song = re.sub(' xxsectionxx ', '\r\n\r\n', song)
     song = re.sub(' xxlinexx ', '\r\n', song)
-
-    return HttpResponse(song)
+    print(song)
+    return song
