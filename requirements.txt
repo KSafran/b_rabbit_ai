@@ -1,0 +1,6 @@
+pandas
+markovify
+spotipy
+bs4
+requests
+nltk
